@@ -61,6 +61,8 @@ An example database model created with a boilerplate casting method:
     querycountcmd.SetCommand("SELECT COUNT(*) FROM MyClassTable");
     int record_count = commandContext.ExecuteCount(querycountcmd);
 
+    Test example: https://github.com/drumzzzzz/DBR/blob/master/DBR.Test/Program.cs
+
 
 Credits
 
