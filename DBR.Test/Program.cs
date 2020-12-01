@@ -10,7 +10,7 @@ namespace DBR.Test
     class Program
     {
         private static void Main(string[] args)
-        {
+        { 
             Console.WindowWidth = 120;
             Console.WindowHeight = 60;
 
