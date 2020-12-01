@@ -1,6 +1,6 @@
 Database Reflection (DBR) via SQLite Project Library 
 
-     A builder pattern based library that provides an abstraction to accessing SQLite type databases
+     A builder pattern based C# library that provides an abstraction to accessing SQLite type databases
      created for UWGB Computer Science Fall semester, 2020.
 
 The goal of this library is to reduce the hardcoding involved with SQLite database interaction
@@ -9,6 +9,16 @@ class models which only need a single boilerplate method that casts the returned
 This also helps reduce the dependence and overhead on larger database libraries (i.e. Entity Framework).
 The reflection is provided via FastMember for optimal performance and caching. Abstractions for 
 non-query and integer count return type commands are also implemented. 
+
+Development setup
+
+    Visual Studio C# 2019 
+    Net Framework 4.7.2 
+    x64 CPU Build*   
+        
+*An x86 build requires changing ~DBR\SQLite.Interop.dll and installation of x86 SQLite framework: 
+https://system.data.sqlite.org/downloads/1.0.113.0/sqlite-netFx46-setup-x86-2015-1.0.113.0.exe
+
 
 How it Works
 
@@ -50,21 +60,13 @@ querycountcmd.SetCommand("SELECT COUNT(*) FROM MyClassTable");
 int record_count = commandContext.ExecuteCount(querycountcmd);
 
 
-Development setup
-    Visual Studio 2019 
-    Net Framework 4.7.2
-    x64 CPU Build*   
-   
-     
-*An x86 build requires changing ~DBR\SQLite.Interop.dll and installation of x86 SQLite framework: 
-https://system.data.sqlite.org/downloads/1.0.113.0/sqlite-netFx46-setup-x86-2015-1.0.113.0.exe
-
 Credits
+
 This software uses the following open source packages:
 
-    SQLite 
-    FastMember
-    Chinook DB
+    SQLite https://www.sqlite.org/index.html 
+    FastMember https://github.com/mgravell/fast-member
+    Chinook DB https://github.com/lerocha/chinook-database
 
 
 Release History
@@ -81,12 +83,12 @@ Nathaniel Kennis kennnl04@uwgb.edu
 
 Distributed under the Apache license. See LICENSE for more information.
 
-https://github.com/drumzzzzz/Encryption
+https://github.com/drumzzzzz/DBR
 
 
 Contributing
 
-    Fork it (https://github.com/drumzzzzz/Encryption/fork)
+    Fork it (https://github.com/drumzzzzz/DBR/fork)
     Create a new Pull Request
 
 
